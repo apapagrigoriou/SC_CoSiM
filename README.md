@@ -30,8 +30,7 @@ The variables are:
 - TCP_SERVER_PORT              : For TCP interface, this is the listening port
 - TCP_TESTBENCH_SERVER_ADDRESS : For TCP interface, this is the server address (used in the testbench)
 - APP_TESTBENCH_USERNAME       : This is the username of the system user (used in the firewall)
-- BUILD_HW_TESTBENCH_ARM       : Possible values are "yes" or "no". This option builds hardware testbenches on ARM Zedboard with NoC Firewall
-			       (for the NoC Firewall, boot.bin, dtb, driver and file sys, see [zedboard bootstrap](https://github.com/angmouzakitis/student_xohw18-187)
+- BUILD_HW_TESTBENCH_ARM       : Possible values are "yes" or "no". This option builds hardware testbenches on ARM Zedboard with NoC Firewall (for the NoC Firewall, boot.bin, dtb, driver and file sys, see [zedboard bootstrap](https://github.com/angmouzakitis/student_xohw18-187)
 - KERNELDIR                    : Absolute path indicating the sources of the kernel for building the hardware NoC Firewall module
 
 ### Installing the Library and Examples
