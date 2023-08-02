@@ -1,0 +1,18 @@
+This is a regression test that helps understand the functionality
+of the generic asynchronous channel interface, with POSIX, SystemV
+or TCP, and optionally Realtimefy support
+
+To run the test:
+
+1) Run first async_module.exe
+2) Run testbench.exe
+
+and observe the fow of information from systemc application via the
+channel to a thread listening on the other side of the channel.
+
+Problems?
+
+I get ...
+Warning: MAIN: Caught exception Error: LISTENER: ALERT: Out of Bound Address request : 0x
+Is this expected, after first packet???
+

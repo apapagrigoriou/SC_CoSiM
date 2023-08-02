@@ -1,0 +1,31 @@
+Realtimify - A small tool for bringing SystemC simulations in synchronization
+             with real time.
+ 
+Copyright (c) 2003-2005 by Digital Force / Mario Trams 
+                           Mario.Trams@digital-force.net
+                           http://www.digital-force.net
+
+How to compile the example:
+ - Adapt the Makefile to your needs. You will at least have to change 
+   SYSTEMC according to your SystemC installation.   
+ - Compile the application by executing "make".
+ - Execute the example by executing "./program".
+
+How to use Realtimify in your application:
+ - Copy realtimify.h and realtimify.cpp into the source tree of your 
+   application.
+ - Handle the Realtimify module in your Makefile just like your other 
+   modules are handled there.
+ - Alternatively, you might also generate a static or dynamic library.
+ - Include "realtimify.h" in your top-level file and instantiate a 
+   Realtimify module in a similar fashion as you can find in the example
+   provided herein (main.cpp).
+
+More information:
+ There is a paper available called 
+ "Realtimify - A small Tool for Real Time SystemC Simulations".
+ It can be downloaded from http://www.digital-force.net/publications/
+ and discusses some details of Realtimify.
+
+Have fun!
+Mario 

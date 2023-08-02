@@ -1,0 +1,12 @@
+This class provides a module that implements an asynchronous
+channel interface which can support 3 different ways to transfer data from the Operationg system to a SystemC Module
+This interfaces can be used by a systemC model of a device to be accessed by a real operating system.
+The two ways to read data from  the operation system and back is by using share memory (system V or posix) and the other is by tcp sockets
+
+The communication between the to worlds is done by using 2 methods. One os thread method called async_os_thread and one systemC thread method called system asysc_sysc_thread_process.
+These methods are references as os_thread and sysc_thread respectively in our paper.
+The role of these threads is to be used to pass data between the operating system (host) and the systemC based device (DuT)
+
+More about this can be found in our paper under the doc folder
+
+A regression test is also provided to display the functionality of the interface on a simple Memory Like Device.

@@ -1,0 +1,21 @@
+#######################
+# DO NOT touch below #
+#######################
+#include config file
+include ../../config.mk
+
+default: all
+
+tesbench:
+	@echo "[INFO] Creating FW Read Testbench Application"
+	$(Q)gcc test_setupcfw_READ.c -o test_read.exe
+	@echo "[INFO] Creating FW Write Testbench Application"
+	$(Q)gcc test_setupcfw_WRITE.c -o test_write.exe
+	@echo "[INFO] Creating FW Testbench for Real Application"
+	$(Q)gcc test_real_application.c -o test_app.exe
+
+clean:
+	@echo "[INFO] Cleaning files"
+	$(Q)rm -f test_*.exe *~ core
+
+all: tesbench

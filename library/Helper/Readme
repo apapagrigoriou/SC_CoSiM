@@ -1,0 +1,57 @@
+C++ Interface: Helper Functions and System Configuration Parameters
+
+Description:  System Configuration Parameters and useful c++ string processing functions.
+
+Authors: HSoC Team (C) - 29 August 2013
+Initial version: Antonis Papagrigoriou
+Changes: Polydoros Petrakis, Miltos Grammatikakis, Antonis Papagrigoriou
+Copyright: See LICENSE file that comes with this distribution
+
+Version 0.2
+
+Contents
+--------------
+1. Change log 
+2. Module description
+3. Included files
+4. Test Description
+
+1. Change log
+--------------
+version 0.2 : 20 December 2014 : Added 3 new teplate classes. An array template, an array of an array and a queue (with random access support. (Antonis Papagrigoriou)
+version 0.1 : 29 August 2013 : First Release
+
+2. Module Description
+--------------
+This module includes global configuration parameters of the HSoC Platform and useful
+string processing functions used by other HSoC classes e.g. abstract processor model (CPU).
+
+3. Included Files
+--------------
+The files which constitute this module are:
+    1. config.h        :: Header file which includes several platform parameters.
+
+       For example, the user may change the following to support different attributes.
+
+       MEMORY_SIZE       :: The default size of a memory module (if not defined differently in the 
+                            module constructor) in words. Default value: 256
+       MEM_READ_OP_TIME  :: The Number of cycles for a memory read operation in a memory module
+                            in System Clock Cycles. Value: 5
+       MEM_WRITE_OP_TIME :: The Number of cycles for a memory write operation in a memory module 
+                            in System Clock Cycles. Value:7
+       MEM_INIT_OP_TIME  :: Time to initialize memory
+       PCKT_BUFF_SIZE    :: The default size of packet interface of the Memory Controller (if not defined 
+                            differently in the module constructor) in packets. Value: 10
+       NUM_OF_VCS        :: The Number of the supporting VCs in the Router Module. Value: 9
+
+    2. helper.h & .cpp :: Files which include a collection of string processing
+    3. hsoc_array.h    :: Header file of the array template class module.
+    4. hsoc_array_of_array.h :: Header file of the array of array template class module.
+    5. hsoc_queue.h    :: Header file of the queue template class module.
+    6. main.cpp        :: Simple regression test for the 3 template classes.
+    7. Makefile        :: The Makefile of the current library module.
+    8. README.txt      :: Current README file.
+
+4. Test Description
+-------------------
+Just test the size and type capabilities of the hsoc_array, hsoc_array_of_array, hsoc_queue template classes

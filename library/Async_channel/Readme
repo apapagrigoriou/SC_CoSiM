@@ -1,0 +1,27 @@
+This class implements our basic asynchronous channel.
+It is based on the asynchronous channel developed by David C Black
+in his SystemC Technology Demonstrator which was presented at the SystemC Tutorial at DVCon 2013
+(https://github.com/dcblack/technology_demonstrator)
+
+It supports the following methods and systemc events
+1. os thread methods for communicating to/from sysc_thread
+void push (async_packet async_payload_ptr);
+void nb_push (async_packet async_payload_ptr);
+bool can_push (void);
+void pull (async_packet &async_payload_ptr);
+bool nb_pull (async_packet &async_payload_ptr);
+bool can_pull (void);
+2. systemc thread methods for communicating to/from os_thread
+void nb_put (async_packet async_payload_ptr);
+void put (async_packet async_payload_ptr);
+bool can_get (void)
+bool nb_get (async_packet &async_payload_ptr);
+void get (async_packet &async_payload_ptr);
+bool can_pull (void)
+3. systemc thread events
+const sc_core::sc_event& sysc_pushed_event(void)
+const sc_core::sc_event& sysc_pulled_event(void)
+
+More about this can be found in our paper under the doc folder
+
+There is are a regression test that displays how we can use this channel in an interface to communicate data between a systemC method and a OS thread
