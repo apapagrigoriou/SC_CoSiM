@@ -20,6 +20,7 @@ Installation Notes
 
 1) Modify the config.mk file according to your installation
 The variables are:
+
 Q                            : Possible values are "@" or none. This variable enables/disables display of compilation details
 INST_LIB_PATH                : Absolute path indicating the location of the SC_COSIM library to be built
 SYSTEMC                      : Absolute path indicating the location of the SystemC library
