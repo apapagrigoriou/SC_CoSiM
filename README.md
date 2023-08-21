@@ -1,15 +1,16 @@
 # SC_CoSiM
 
 ## Description
-SC_CoSiM is a platform which focuses on validating a full system, by performing near real-time, command-to-command co-simulation of the hardware DUT implemented on FPGA as a full system prototype (with CPU, on-chip interconnect, memory, application, drivers, and OS, typically Linux) against its equivalent cycle-approximate system-level model of the DUT. Our work presented at DVCon-Europe 2018 extended the [technology demonstrator](https://github.com/dcblack/technology_demonstrator) from David C. Black.
+SC_CoSiM is a platform which focuses on validating a full system, by performing near real-time, command-to-command co-simulation of cycle-approximate system-level model of the DUT with an application  running a Linux embedded system prototype (with CPU, on-chip interconnect, memory, application, drivers, and OS, typically Linux). This work extents the work  [technology demonstrator](https://github.com/dcblack/technology_demonstrator) from David C. Black.
 
 This project was moved from sourseforge. For more information and history about it please visit the project page in [sourceforge](https://sourceforge.net/projects/sc-cosim/).
 Our platform is based on systemC v 2.3 which can be downloaded from: [systemc 2.3](https://github.com/systemc/systemc-2.3)
-To install systemC on zedboard or other ARMv7 architecture you must enable the pthreads support in systemC (--enable-pthreads) in the configure of systemC
+For systemC to be able to run on Zedboard or other ARMv7 architecture board you must enable the pthreads support in systemC (--enable-pthreads) in the configure of systemC
 
-This package specifies an experimental framework (called co-simulation platform) for co-validation and co-design. The proposed framework is based on a bidirectional asynchronous channel between a SystemC device model and a physical, full system prototype of the same device on FPGA. The asynchronous channel uses TCP sockets when the
-SystemC model is on a different host, and shared memory when the model is on the same host.
-Synchronization is maintained between the two sides by aligning the SystemC side with the real-time clock (using Realtimify). The full system is used to co-simulate a complete firewall application, consisting of a NoC firewall module (the DUT), drivers, OS, and application software running on an ARM v7 Zedboard. The asynchronous channel has good performance, especially for shared memory communication, with an overhead in the ms range. Overall simulation speed is sufficient such that real-time performance characteristics can be verified.
+This package specifies an experimental framework (called co-simulation platform) for co-validation and co-design. The proposed framework is based on a bidirectional asynchronous channel between a SystemC device model running in a SystemC virtual enviroment and a board running Linux. The asynchronous channel uses TCP sockets when the SystemC model is on a different host, and shared memory when the model is on the same host (board).
+Synchronization is maintained between the two sides by aligning the SystemC side with the real-time clock (using Realtimify). 
+As an example this system is used to co-simulate a complete firewall application, consisting of a NoC firewall module (the DUT), drivers, OS, and application software running on an ARM v7 Zedboard. 
+The asynchronous channel has good performance, especially for shared memory communication, with an overhead in the ms range. Overall simulation speed is sufficient such that real-time performance characteristics can be verified.
 
 ## Documentation & Reference
 For more information, please refer to the presentation and pdf (preprint) file in docs/
