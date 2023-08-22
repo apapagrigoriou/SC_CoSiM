@@ -1,7 +1,7 @@
 # SC_CoSiM
 
 ## Description
-SC_CoSiM is a platform which focuses on validating a full system, by performing near real-time, command-to-command co-simulation of cycle-approximate system-level model of the DUT with an application  running on an embedded system prototype (with CPU, on-chip interconnect, memory, application, drivers, and OS, typically Linux). This work extents the work  [technology demonstrator](https://github.com/dcblack/technology_demonstrator) from David C. Black.
+SC_CoSiM is a platform which focuses on validating a full system, by performing near real-time, command-to-command co-simulation of cycle-approximate system-level model of the DUT (in high level synthesis) with an application  running on an embedded system prototype (with CPU, on-chip interconnect, memory, application, drivers, and OS, typically Linux). This work extents the work  [technology demonstrator](https://github.com/dcblack/technology_demonstrator) from David C. Black.
 
 This project was moved from sourseforge. For more information and history about it please visit the project page in [sourceforge](https://sourceforge.net/projects/sc-cosim/).
 Our platform is based on systemC v 2.3 which can be downloaded from: [systemc 2.3](https://github.com/systemc/systemc-2.3)
